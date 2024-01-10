@@ -41,6 +41,7 @@ def log_event(status, target_ip):
 def main():
     # Welcome message for user
     print("Welcome to the Uptime Sensor Tool. This script will evaluate if a host is up or down on the Local Area Network (LAN).")
+    print("The sensor tool will ping continuously, if you want to exit the tool please press ctrl + c.")
     # This accepts user input for the target IP address
     target_ip = input("Please enter an IP address on the LAN: ")
 
