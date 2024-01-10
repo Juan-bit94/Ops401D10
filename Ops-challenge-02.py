@@ -30,12 +30,11 @@ def log_event(status, target_ip):
 
     # This creates a log file in the Documents folder with a timestamped name
     # The file name could be called for example: ping_log_20240110_153045.txt, the first set of numbers will be the date, the second will be military time (24h)
-    log_filename = os.path.join(os.path.expanduser("~"), "Documents", f"ping_log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt")
-
-    # This appends the log entry to the log file
+    # This will also append the log entry to the log file
+    log_filename = os.path.join(os.path.expanduser("~"), "Documents", "ping_log.txt")
     with open(log_filename, 'a') as log_file:
         log_file.write(log_entry + '\n')
-
+    
     # Print the log entry
     print(log_entry)
 
