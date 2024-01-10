@@ -1,6 +1,9 @@
+# If you are running this script on a Linux environment such as Ubuntu
+# please uncomment the shebang line and the log_filename variable 
+# #!/usr/bin/env python3
 # Script Name:					Uptime Sensor Tool
 # Author: 					    Juan Maldonado
-# Date of latest revision:		1/9/2023
+# Date of latest revision:		1/10/2023
 # Purpose:					    This script is an uptime sensor tool that uses ICMP packets to evaluate if hosts on the LAN are up or down.
 
 # For time-related functions
@@ -30,6 +33,9 @@ def log_event(status, target_ip):
 
     # This creates a log file in the Documents folder with a timestamped name
     # The file name could be called for example: ping_log_20240110_153045.txt, the first set of numbers will be the date, the second will be military time (24h)
+
+    # For Linux environment uncomment the log_filename variable below (line 38) and comment the log_filename variable (line 39) 
+    # log_filename = os.path.join(os.path.expanduser("~"), f"ping_log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt")
     log_filename = os.path.join(os.path.expanduser("~"), "Documents", f"ping_log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt")
     with open(log_filename, 'a') as log_file:
         log_file.write(log_entry + '\n')
