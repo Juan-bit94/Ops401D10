@@ -22,11 +22,11 @@ def ip_to_ping(target_ip):
     return response is not None
 
 def log_event(status, target_ip):
-    # This gets the current timestamp
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+     # This gets the current timestamp
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
 
     # This formats the log entry
-    log_entry = f"{timestamp} - Target: {target_ip} - Status: {'Host is UP on the LAN' if status else 'Host is Down on the LAN'}"
+    log_entry = f"{timestamp} Network {'Active' if status else 'Inactive'} to {target_ip}"
 
     # This creates a log file in the Documents folder with a timestamped name
     # The file name could be called for example: ping_log_20240110_153045.txt, the first set of numbers will be the date, the second will be military time (24h)
