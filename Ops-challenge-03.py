@@ -2,10 +2,16 @@
 # please uncomment the shebang line and the log_filename variable 
 # #!/usr/bin/env python3
 
-# Script Name:					   Uptime Sensor Tool part 2
-# Author: 					       Juan Maldonado
-# Date of latest revision:		   1/10/2023
-# Purpose:					       This script is an uptime sensor tool that uses ICMP packets to evaluate if hosts on the LAN are up or down. And sends an email notification. 
+# Script Name:					Uptime Sensor Tool part 2
+# Author: 					    Juan Maldonado
+# Date of latest revision:		1/10/2023
+# Purpose:					    This script is an uptime sensor tool that uses ICMP packets to evaluate if hosts on the LAN are up or down.
+
+# Senerio: I used two vms on my lab PC, here is the basic setup: 
+# One VM is a Windows 10 pro (with a bridged adapter), it has VScode and it will run this python code.
+# The second VM is a Ubuntu Linux, it will be pinged by the python program and after a few pings, you will shutdown this VM to simulate the ping failure.
+# The script will continue to and send an email notification
+# The burner email is setup with an app password, so it will comply with the code in order to send a notification email to recipent email variable. 
 
 # For time-related functions
 import time  
@@ -28,8 +34,9 @@ import smtplib
 from email.mime.text import MIMEText
 
 # This is the email configuration
-# This is a burner email that will recive the notification 
-recipient_email = 'johncruzzz1996@gmail.com'
+# This is an email that will recive the notification 
+# I would change it to an email you have access to in order to verify.
+recipient_email = 'cruz59349@gmail.com' # testers need to use a different email.
 
 # This checks if ip can be pinged 
 def ip_to_ping(target_ip):
@@ -58,11 +65,16 @@ def send_email(subject, body):
 
     msg = MIMEText(body)
     msg[ 'Subject' ] = subject
-    msg[ 'From' ] = 'sender@example.com'
+    msg[ 'From' ] = 'johncruzzz1996@gmail.com'
     msg[ 'To' ] = recipient_email
 
-    with smtplib.SMTP('localhost') as server:
-        server.sendmail('sender@example.com', [recipient_email], msg.as_string())
+    # This is the App password for the gmail email
+    app_password = 'znsr eqhg rtid orxh'
+    with smtplib.SMTP('smtp.gmail.com', 587) as server:
+        server.starttls()
+        server.login('johncruzzz1996@gmail.com', app_password)
+        server.sendmail('johncruzzz1996@gmail.com', [recipient_email], msg.as_string())
+        
 
 
 def main():
