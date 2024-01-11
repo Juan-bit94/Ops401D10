@@ -4,7 +4,7 @@
 
 # Script Name:					Uptime Sensor Tool part 2
 # Author: 					    Juan Maldonado
-# Date of latest revision:		1/10/2023
+# Date of latest revision:		   1/10/2023
 # Purpose:					    This script is an uptime sensor tool that uses ICMP packets to evaluate if hosts on the LAN are up or down.
 
 # For time-related functions
