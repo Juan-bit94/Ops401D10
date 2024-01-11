@@ -2,10 +2,10 @@
 # please uncomment the shebang line and the log_filename variable 
 # #!/usr/bin/env python3
 
-# Script Name:					Uptime Sensor Tool part 2
-# Author: 					    Juan Maldonado
+# Script Name:					   Uptime Sensor Tool part 2
+# Author: 					       Juan Maldonado
 # Date of latest revision:		   1/10/2023
-# Purpose:					    This script is an uptime sensor tool that uses ICMP packets to evaluate if hosts on the LAN are up or down.
+# Purpose:					       This script is an uptime sensor tool that uses ICMP packets to evaluate if hosts on the LAN are up or down. And sends an email notification. 
 
 # For time-related functions
 import time  
