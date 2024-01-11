@@ -7,11 +7,13 @@
 # Date of latest revision:		1/10/2023
 # Purpose:					    This script is an uptime sensor tool that uses ICMP packets to evaluate if hosts on the LAN are up or down.
 
-# Senerio: I used two vms on my lab PC, here is the basic setup: 
+# scenario: I used two vms on my lab PC, here is the basic setup: 
 # One VM is a Windows 10 pro (with a bridged adapter), it has VScode and it will run this python code.
-# The second VM is a Ubuntu Linux, it will be pinged by the python program and after a few pings, you will shutdown this VM to simulate the ping failure.
+# The second VM is a Ubuntu Linux (also with a bridged adapter), it will be pinged by the python program and 
+# after a few pings, you will shutdown this VM to simulate the ping failure.
 # The script will continue to and send an email notification
-# The burner email is setup with an app password, so it will comply with the code in order to send a notification email to recipent email variable. 
+# The burner email is setup with an app password, 
+# so it will comply with the code in order to send a notification email to recipent email variable. 
 
 # For time-related functions
 import time  
