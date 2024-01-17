@@ -1,3 +1,6 @@
+# If you are running on bash, uncomment the next line
+# #!/bin/bash
+
 # Script Name:					File Encryption Script part 1
 # Author: 					    Juan Maldonado
 # Date of latest revision:		1/16/2024
