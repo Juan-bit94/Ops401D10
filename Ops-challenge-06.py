@@ -4,7 +4,7 @@
 # Purpose:					    This script encrypts a single file. 
 
 # This imports necessary modules for cryptography 
-# 
+# I got information about this module at this site: https://thepythoncode.com/article/encrypt-decrypt-files-symmetric-python
 from cryptography.fernet import Fernet
 import os
 
