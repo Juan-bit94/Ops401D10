@@ -7,6 +7,11 @@
 # Purpose:					    This script is a network security tool. It scans the network. 
 
 
+# Before running this code on VScode please do the following:
+# on the command terminal, run the command pip install scapy
+# If using a linux os, run the command sudo apt-get update & sudo apt-get install python3-scapy
+
+# Documentation for scapy use is found on this website: https://scapy.readthedocs.io/en/latest/usage.html#sending-packets
 from scapy.all import *
 import random
 
