@@ -92,6 +92,6 @@ def main():
         except ValueError:
             print("Sorry, the value you entered is invalid, please enter a number between 1 and 4 or quit to leave.")
 
-if __name__ == "_main__":
+if __name__ == "__main__":
     main()
 
