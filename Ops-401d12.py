@@ -1,19 +1,38 @@
+# If you are running on bash, uncomment the next line
+# #!/bin/bash
+
+# Script Name:					Ops-401d12.py
+# Author: 					    Juan Maldonado
+# Date of latest revision:		1/23/2024
+# Purpose:					    This script is a network security tool that allows users utilize a TCP Port Range Scanner mode and ICMP Ping
+
+
+# Before running this code on VScode please do the following:
+# on the command terminal, run the command pip install scapy
+# If using a linux os, run the command sudo apt-get update & sudo apt-get install python3-scapy
+
+# Documentation for scapy use is found on this website: https://scapy.readthedocs.io/en/latest/usage.html#sending-packets
 from scapy.all import *
 import random
+# Documentation for ipaddress use is found on this website: https://docs.python.org/3/library/ipaddress.html
 from ipaddress import ip_network
 
+# This scans a specific TCP port
 def scan_port(ip, port):
     # Same as before
 
+# This scans a range of TCP ports
 def scan_ports(ip, port_range):
     for port in range(port_range[0], port_range[1] + 1):
         scan_port(ip, port)
 
+# This perfroms ICMP Ping Sweep
 def icmp_ping_sweep(network_address):
     network = ip_network(network_address, strict=False)
     live_hosts = []
 
     for ip in network.hosts():
+        # This sends an ICMP echo requests and waits for a respinse (will wait one sec)
         response = sr1(IP(dst=str(ip))/ICMP(), timeout=1, verbose=0)
         if response is not None and response.haslayer(ICMP) and response.getlayer(ICMP).type == 0:
             print(f"Host {ip} is reachable.")
