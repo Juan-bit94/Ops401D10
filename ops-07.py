@@ -1,3 +1,18 @@
+# If you are running on bash, uncomment the next line
+# #!/bin/bash
+
+# Script Name:					ops-07.py
+# Author: 					    Juan Maldonado
+# Date of latest revision:		1/24/2024
+# Purpose:					    This script adds a feature capability, it now recursively encrypt a single folder and all its contents.
+#                               It also recursively decrypt a single folder that was encrypted by this tool. 
+
+
+# Before running this code on VScode please do the following:
+# on the command terminal, run the command pip install scapy
+# If using a linux os, run the command sudo apt-get update & sudo apt-get install python3-scapy
+
+
 from cryptography.fernet import Fernet
 
 
