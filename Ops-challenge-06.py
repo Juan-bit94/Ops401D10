@@ -43,7 +43,7 @@ def encrypt_string(plaintext, key):
 def decrypt_string(ciphertext, key):
     cipher_suite = Fernet(key)
     decrypted_text = cipher_suite.decrypt(ciphertext.encode())
-    print("Decrypted String:", decrypted_text.encode())
+    print("Decrypted String:", decrypted_text.decode())
 
 def main():
     # This generates a key for encryption/decryption
