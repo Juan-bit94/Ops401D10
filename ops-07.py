@@ -12,7 +12,7 @@
 # on the command terminal, run the command pip install scapy
 # If using a linux os, run the command sudo apt-get update & sudo apt-get install python3-scapy
 
-
+# I got information about this module at this site: https://thepythoncode.com/article/encrypt-decrypt-files-symmetric-python
 from cryptography.fernet import Fernet
 
 
