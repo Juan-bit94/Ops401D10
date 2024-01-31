@@ -6,11 +6,13 @@
 
 import time
 
-#
+# I used the following websit as resources: https://null-byte.wonderhowto.com/how-to/sploit-make-ssh-brute-forcer-python-0161689/
+#                                           https://www.geeksforgeeks.org/how-to-execute-shell-commands-in-a-remote-machine-using-python-paramiko/
+#                                           https://docs.paramiko.org/en/latest/api/client.html?highlight=ssh%20set_missing_host_key_policy%20paramiko%20autoaddpolicy
 import paramiko
 
 # This function is for Mode 1: Offensive; Dictionary Iterator
-def iterator():
+def iteration():
     # This prompts the user to input the word list file path
     filepath = input("Enter your word list file path:\n")
 
@@ -28,7 +30,7 @@ def iterator():
         print(f"An error occurred: {e}")  # This prints a generic error message if an exception occurs
 
 # This function is for Mode 2: Defensive; Password Recognized
-def check_password():
+def password_checker():
     # This prompts the user to input the string to search for and the word list file path
     user_string = input("Please enter the string to search for:\n")
     filepath = input("Please enter your word list file path:\n")
@@ -102,9 +104,9 @@ Brute Force Wordlist Attack Tool Menu
 """)
 
         if mode == "1":
-            iterator()  # This calls the iterator function for Mode 1
+            iteration()  # This calls the function for Mode 1
         elif mode == "2":
-            check_password()  # This calls the check_password function for Mode 2
+            password_checker()  # This calls the function for Mode 2
         elif mode == '3':
             # This prompts the user for input in Mode 3
             ip_address = input("Enter the target SSH server IP address:\n")
