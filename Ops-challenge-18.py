@@ -4,6 +4,7 @@
 # Purpose:					    This is a custom tool that more code was added to perform even more brute force attacks to better unsetstand
 #                                the types of automation employed by adversaries. Also now it has an additional Mode 4: Brute Force Attack on Password-Locked Zip File.
 
+#!/usr/bin/env python3
 import time
 
 # I used the following websit as resources: https://null-byte.wonderhowto.com/how-to/sploit-make-ssh-brute-forcer-python-0161689/
