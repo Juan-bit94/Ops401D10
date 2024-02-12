@@ -3,6 +3,7 @@
 # Date of latest revision:		2/12/2024
 # Purpose:					    This script is incorporating logging capabilities into one of my existing Python tools (an uptime sensor tool that uses ICMP packets to evaluate if hosts on the LAN are up or down).
 
+#!/usr/bin/env python3
 # These are all necessary modules
 import time  # This is for time-related functions
 from datetime import datetime  # This is for working with date and time
