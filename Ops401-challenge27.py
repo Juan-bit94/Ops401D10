@@ -1,6 +1,6 @@
-# Script Name:					Event Logging Tool
+# Script Name:					Event Logging Tool & log rotation
 # Author: 					    Juan Maldonado
-# Date of latest revision:		2/12/2024
+# Date of latest revision:		2/13/2024
 # Purpose:					    This script has incorporating logging capabilities into one of my existing Python tools (an uptime sensor tool that uses ICMP packets to evaluate if hosts on the LAN are up or down).
 #                               Now it has a new log rotation feature based on size
 #!/usr/bin/env python3
