@@ -3,8 +3,10 @@
 # Date of latest revision:		2/13/2024
 # Purpose:					    This script has incorporating logging capabilities into one of my existing Python tools (an uptime sensor tool that uses ICMP packets to evaluate if hosts on the LAN are up or down).
 #                               Now it has a new log rotation feature based on size
+
 #!/usr/bin/env python3
 
+# resource: https://www.blog.pythonlibrary.org/2014/02/11/python-how-to-create-rotating-logs/ 
 import time
 import os
 import logging
