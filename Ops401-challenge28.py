@@ -6,8 +6,6 @@
 
 #!/usr/bin/env python3
 
-#!/usr/bin/env python3
-
 import time  # This imports the time module for timing operations
 import os  # This imports the os module for interacting with the operating system
 import logging  # This imports the logging module for logging events
