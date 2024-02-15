@@ -24,6 +24,14 @@ def ip_to_ping(t_ip):
         logging.error(f"Ping error occurred: {e}")  # This logs an error if ping operation fails
         return False  # This returns a False indicating failure
 
+# This creates a routing file handler
+def setup_logging(log_filename):
+    rotating_handler = RotatingFileHandler(log_filename, maxBytes=20000, backupCount=5)
+    rotating_handler.setFormatter(logging.Formatter(log_format)) # This sets the format for log messages to the defined log format. 
+    rotating_handler.setLevel(logging.INFO) # This sets the logging level to Info
+    logger = logging.getLogger() # This gets the root logger instance
+    logger.addHandler(rotating_handler) # This allows for all log messages to be handled by this handler. 
+
 def log_event(status, t_ip, log_filename):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]  # This gets a current timestamp
     log_entry = f"{timestamp} Network {'Active' if status else 'Inactive'} to {t_ip}"  # This formats a log entry
