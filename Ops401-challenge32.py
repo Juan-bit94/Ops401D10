@@ -1,3 +1,8 @@
+# Script Name:					Ops401-challenge32.py
+# Author: 					    Juan Maldonado
+# Date of latest revision:		2/20/2024
+# Purpose:					    script builds upon the last one, now it recusrively scans each file and folder, generates a MD5 hash, and prints the variable to the screen along with a timestamp.
+
 #!/usr/bin/env python3
 
 # These are all the necessary modules
